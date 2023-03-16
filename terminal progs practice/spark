@@ -1,0 +1,388 @@
+Last login: Tue Mar 14 15:29:46 on ttys001
+kartikchandna@Kartiks-MacBook-Pro ~ % brew install spark
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+######################################################################## 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+######################################################################## 100.0%
+Warning: Treating spark as a formula. For the cask, use homebrew/cask/spark
+==> Fetching spark
+==> Downloading https://ghcr.io/v2/homebrew/core/spark/manifests/1.0.1
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/spark/blobs/sha256:c98b248ad299
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Pouring spark--1.0.1.all.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/spark/1.0.1: 6 files, 7.2KB
+==> Running `brew cleanup spark`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+kartikchandna@Kartiks-MacBook-Pro ~ % spark
+
+    USAGE:
+      spark [-h] VALUE,...
+
+    EXAMPLES:
+      spark 1 5 22 13 53
+      ▁▁▃▂█
+      spark 0,30,55,80,33,150
+      ▁▂▃▄▂█
+      echo 9 13 5 17 1 | spark
+      ▄▆▂█▁
+kartikchandna@Kartiks-MacBook-Pro ~ % ./bin/spark-shell
+zsh: no such file or directory: ./bin/spark-shell
+kartikchandna@Kartiks-MacBook-Pro ~ % spark-shell
+zsh: command not found: spark-shell
+kartikchandna@Kartiks-MacBook-Pro ~ % spark --version
+▃
+kartikchandna@Kartiks-MacBook-Pro ~ % brew install scala
+==> Fetching dependencies for scala: freetype, glib, and harfbuzz
+==> Fetching freetype
+==> Downloading https://ghcr.io/v2/homebrew/core/freetype/manifests/2.13.0_1
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/freetype/blobs/sha256:731770a82
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Fetching glib
+==> Downloading https://ghcr.io/v2/homebrew/core/glib/manifests/2.74.6
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/glib/blobs/sha256:6a797f2712203
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Fetching harfbuzz
+==> Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/manifests/7.1.0
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/harfbuzz/blobs/sha256:a93182e4d
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Fetching scala
+==> Downloading https://ghcr.io/v2/homebrew/core/scala/manifests/3.2.2
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/scala/blobs/sha256:5b522d89c3cb
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Installing dependencies for scala: freetype, glib, and harfbuzz
+==> Installing scala dependency: freetype
+==> Pouring freetype--2.13.0_1.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/freetype/2.13.0_1: 67 files, 2.4MB
+==> Installing scala dependency: glib
+==> Pouring glib--2.74.6.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/glib/2.74.6: 449 files, 21.9MB
+==> Installing scala dependency: harfbuzz
+==> Pouring harfbuzz--7.1.0.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/harfbuzz/7.1.0: 76 files, 8.8MB
+==> Installing scala
+==> Pouring scala--3.2.2.all.bottle.tar.gz
+==> Caveats
+To use with IntelliJ, set the Scala home to:
+  /opt/homebrew/opt/scala/idea
+==> Summary
+🍺  /opt/homebrew/Cellar/scala/3.2.2: 54 files, 37.7MB
+==> Running `brew cleanup scala`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+==> Caveats
+==> scala
+To use with IntelliJ, set the Scala home to:
+  /opt/homebrew/opt/scala/idea
+kartikchandna@Kartiks-MacBook-Pro ~ % brew install apache-spark
+==> Fetching apache-spark
+==> Downloading https://ghcr.io/v2/homebrew/core/apache-spark/manifests/3.3.2
+######################################################################## 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/apache-spark/blobs/sha256:c49d4
+==> Downloading from https://pkg-containers.githubusercontent.com/ghcr1/blobs/sh
+######################################################################## 100.0%
+==> Pouring apache-spark--3.3.2.all.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/apache-spark/3.3.2: 1,453 files, 320.9MB
+==> Running `brew cleanup apache-spark`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+kartikchandna@Kartiks-MacBook-Pro ~ % spark-shell
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/03/14 21:59:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Spark context Web UI available at http://10.103.142.131:4040
+Spark context available as 'sc' (master = local[*], app id = local-1678811345307).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.3.2
+      /_/
+         
+Using Scala version 2.12.15 (OpenJDK 64-Bit Server VM, Java 19.0.2)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> :help
+All commands can be abbreviated, e.g., :he instead of :help.
+:completions <string>    output completions for the given string
+:edit <id>|<line>        edit history
+:help [command]          print this summary or command-specific help
+:history [num]           show the history (optional num is commands to show)
+:h? <string>             search the history
+:imports [name name ...] show import history, identifying sources of names
+:implicits [-v]          show the implicits in scope
+:javap <path|class>      disassemble a file or class name
+:line <id>|<line>        place line(s) at the end of history
+:load <path>             interpret lines in a file
+:paste [-raw] [path]     enter paste mode or paste a file
+:power                   enable power user mode
+:quit                    exit the interpreter
+:replay [options]        reset the repl and replay all previous commands
+:require <path>          add a jar to the classpath
+:reset [options]         reset the repl to its initial state, forgetting all session entries
+:save <path>             save replayable session to a file
+:sh <command line>       run a shell command (result is implicitly => List[String])
+:settings <options>      update compiler options, if possible; see reset
+:silent                  disable/enable automatic printing of results
+:type [-v] <expr>        display the type of an expression without evaluating it
+:kind [-v] <type>        display the kind of a type. see also :help kind
+:warnings                show the suppressed warnings from the most recent line which had any
+
+scala> : he power
+: is ambiguous: did you mean :completions or :edit or :help or :history or :h? or :imports or :implicits or :javap or :line or :load or :paste or :power or :quit or :replay or :require or :reset or :save or :sh or :settings or :silent or :type or :kind or :warnings?
+
+scala> :he power
+
+enable power user mode
+
+scala> val textFile = spark.read.textFile("Read.md"
+     | )
+org.apache.spark.sql.AnalysisException: Path does not exist: file:/Users/kartikchandna/Read.md
+  at org.apache.spark.sql.errors.QueryCompilationErrors$.dataPathNotExistError(QueryCompilationErrors.scala:1011)
+  at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$4(DataSource.scala:785)
+  at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$4$adapted(DataSource.scala:782)
+  at org.apache.spark.util.ThreadUtils$.$anonfun$parmap$2(ThreadUtils.scala:372)
+  at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+  at scala.util.Success.$anonfun$map$1(Try.scala:255)
+  at scala.util.Success.map(Try.scala:213)
+  at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+  at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+  at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+  at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+  at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1423)
+  at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+  at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1311)
+  at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1841)
+  at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1806)
+  at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+scala> val textFile = spark.read.textFile("README.md")
+org.apache.spark.sql.AnalysisException: Path does not exist: file:/Users/kartikchandna/README.md
+  at org.apache.spark.sql.errors.QueryCompilationErrors$.dataPathNotExistError(QueryCompilationErrors.scala:1011)
+  at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$4(DataSource.scala:785)
+  at org.apache.spark.sql.execution.datasources.DataSource$.$anonfun$checkAndGlobPathIfNecessary$4$adapted(DataSource.scala:782)
+  at org.apache.spark.util.ThreadUtils$.$anonfun$parmap$2(ThreadUtils.scala:372)
+  at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+  at scala.util.Success.$anonfun$map$1(Try.scala:255)
+  at scala.util.Success.map(Try.scala:213)
+  at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+  at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+  at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+  at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+  at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1423)
+  at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+  at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1311)
+  at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1841)
+  at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1806)
+  at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+
+scala> import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext
+
+scala> import org.apache.spark.SparkConf
+import org.apache.spark.SparkConf
+
+scala> val conf = new SparkConf().setAppName(practice).setMaster(local)
+<console>:24: error: not found: value practice
+       val conf = new SparkConf().setAppName(practice).setMaster(local)
+                                             ^
+<console>:24: error: not found: value local
+       val conf = new SparkConf().setAppName(practice).setMaster(local)
+                                                                 ^
+
+scala> val conf = new SparkConf().setAppName("practice").setMaster("local")
+conf: org.apache.spark.SparkConf = org.apache.spark.SparkConf@6c01bc57
+
+scala> new SparkContext(conf)
+org.apache.spark.SparkException: Only one SparkContext should be running in this JVM (see SPARK-2243).The currently running SparkContext was created at:
+org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+org.apache.spark.repl.Main$.createSparkSession(Main.scala:106)
+<init>(<console>:15)
+<init>(<console>:42)
+<init>(<console>:44)
+.<init>(<console>:48)
+.<clinit>(<console>)
+.lzycompute(<console>:7)
+.$print(<console>:6)
+$print(<console>)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+scala.tools.nsc.interpreter.IMain$ReadEvalPrint.call(IMain.scala:747)
+scala.tools.nsc.interpreter.IMain$Request.loadAndRun(IMain.scala:1020)
+scala.tools.nsc.interpreter.IMain.$anonfun$interpret$1(IMain.scala:568)
+scala.reflect.internal.util.ScalaClassLoader.asContext(ScalaClassLoader.scala:36)
+scala.reflect.internal.util.ScalaClassLoader.asContext$(ScalaClassLoader.scala:116)
+scala.reflect.internal.util.AbstractFileClassLoader.asContext(AbstractFileClassLoader.scala:41)
+scala.tools.nsc.interpreter.IMain.loadAndRunReq$1(IMain.scala:567)
+scala.tools.nsc.interpreter.IMain.interpret(IMain.scala:594)
+  at org.apache.spark.SparkContext$.$anonfun$assertNoOtherContextIsRunning$2(SparkContext.scala:2671)
+  at scala.Option.foreach(Option.scala:407)
+  at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2668)
+  at org.apache.spark.SparkContext$.markPartiallyConstructed(SparkContext.scala:2758)
+  at org.apache.spark.SparkContext.<init>(SparkContext.scala:97)
+  ... 43 elided
+
+scala> stop()
+<console>:25: error: not found: value stop
+       stop()
+       ^
+
+scala> val conf = new SparkConf().setAppName("practice").setMaster("local")
+conf: org.apache.spark.SparkConf = org.apache.spark.SparkConf@361069db
+
+scala> new SparkContext(conf)
+org.apache.spark.SparkException: Only one SparkContext should be running in this JVM (see SPARK-2243).The currently running SparkContext was created at:
+org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+org.apache.spark.repl.Main$.createSparkSession(Main.scala:106)
+<init>(<console>:15)
+<init>(<console>:42)
+<init>(<console>:44)
+.<init>(<console>:48)
+.<clinit>(<console>)
+.lzycompute(<console>:7)
+.$print(<console>:6)
+$print(<console>)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+scala.tools.nsc.interpreter.IMain$ReadEvalPrint.call(IMain.scala:747)
+scala.tools.nsc.interpreter.IMain$Request.loadAndRun(IMain.scala:1020)
+scala.tools.nsc.interpreter.IMain.$anonfun$interpret$1(IMain.scala:568)
+scala.reflect.internal.util.ScalaClassLoader.asContext(ScalaClassLoader.scala:36)
+scala.reflect.internal.util.ScalaClassLoader.asContext$(ScalaClassLoader.scala:116)
+scala.reflect.internal.util.AbstractFileClassLoader.asContext(AbstractFileClassLoader.scala:41)
+scala.tools.nsc.interpreter.IMain.loadAndRunReq$1(IMain.scala:567)
+scala.tools.nsc.interpreter.IMain.interpret(IMain.scala:594)
+  at org.apache.spark.SparkContext$.$anonfun$assertNoOtherContextIsRunning$2(SparkContext.scala:2671)
+  at scala.Option.foreach(Option.scala:407)
+  at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2668)
+  at org.apache.spark.SparkContext$.markPartiallyConstructed(SparkContext.scala:2758)
+  at org.apache.spark.SparkContext.<init>(SparkContext.scala:97)
+  ... 43 elided
+
+scala> spark.sparkContext.stop()
+
+scala> spark.sparkContext.stop()
+
+scala> val conf = new SparkConf().setAppName("practice").setMaster("local")
+conf: org.apache.spark.SparkConf = org.apache.spark.SparkConf@512257ea
+
+scala> spark.sparkContext.stop()
+
+scala> spark.sparkContext.stop()
+
+scala> spark.sparkContext.stop()
+
+scala> spark.sparkContext.stop()
+
+scala> val conf = new SparkConf().setAppName("practice").setMaster("local")
+conf: org.apache.spark.SparkConf = org.apache.spark.SparkConf@6425d038
+
+scala> new SparkContext(conf)
+res9: org.apache.spark.SparkContext = org.apache.spark.SparkContext@6aee016d
+
+scala> val data = Array(1,2,3,4,5)
+data: Array[Int] = Array(1, 2, 3, 4, 5)
+
+scala> val distData = sc.parallelize(data)
+java.lang.IllegalStateException: Cannot call methods on a stopped SparkContext.
+This stopped SparkContext was created at:
+
+org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+org.apache.spark.repl.Main$.createSparkSession(Main.scala:106)
+<init>(<console>:15)
+<init>(<console>:42)
+<init>(<console>:44)
+.<init>(<console>:48)
+.<clinit>(<console>)
+.lzycompute(<console>:7)
+.$print(<console>:6)
+$print(<console>)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+scala.tools.nsc.interpreter.IMain$ReadEvalPrint.call(IMain.scala:747)
+scala.tools.nsc.interpreter.IMain$Request.loadAndRun(IMain.scala:1020)
+scala.tools.nsc.interpreter.IMain.$anonfun$interpret$1(IMain.scala:568)
+scala.reflect.internal.util.ScalaClassLoader.asContext(ScalaClassLoader.scala:36)
+scala.reflect.internal.util.ScalaClassLoader.asContext$(ScalaClassLoader.scala:116)
+scala.reflect.internal.util.AbstractFileClassLoader.asContext(AbstractFileClassLoader.scala:41)
+scala.tools.nsc.interpreter.IMain.loadAndRunReq$1(IMain.scala:567)
+scala.tools.nsc.interpreter.IMain.interpret(IMain.scala:594)
+
+The currently active SparkContext was created at:
+
+org.apache.spark.SparkContext.<init>(SparkContext.scala:87)
+<init>(<console>:26)
+<init>(<console>:30)
+<init>(<console>:32)
+<init>(<console>:34)
+<init>(<console>:36)
+<init>(<console>:38)
+<init>(<console>:40)
+<init>(<console>:42)
+<init>(<console>:44)
+.<init>(<console>:48)
+.<clinit>(<console>)
+.lzycompute(<console>:7)
+.$print(<console>:6)
+$print(<console>)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+scala.tools.nsc.interpreter.IMain$ReadEvalPrint.call(IMain.scala:747)
+scala.tools.nsc.interpreter.IMain$Request.loadAndRun(IMain.scala:1020)
+scala.tools.nsc.interpreter.IMain.$anonfun$interpret$1(IMain.scala:568)
+
+  at org.apache.spark.SparkContext.assertNotStopped(SparkContext.scala:120)
+  at org.apache.spark.SparkContext.defaultParallelism(SparkContext.scala:2534)
+  at org.apache.spark.SparkContext.parallelize$default$2(SparkContext.scala:833)
+  ... 43 elided
+
+scala> exit()
+<console>:25: error: not found: value exit
+       exit()
+       ^
+
+scala> exit
+<console>:25: error: not found: value exit
+       exit
+       ^
+
+scala> :he
+All commands can be abbreviated, e.g., :he instead of :help.
+:completions <string>    output completions for the given string
+:edit <id>|<line>        edit history
+:help [command]          print this summary or command-specific help
+:history [num]           show the history (optional num is commands to show)
+:h? <string>             search the history
+:imports [name name ...] show import history, identifying sources of names
+:implicits [-v]          show the implicits in scope
+:javap <path|class>      disassemble a file or class name
+:line <id>|<line>        place line(s) at the end of history
+:load <path>             interpret lines in a file
+:paste [-raw] [path]     enter paste mode or paste a file
+:power                   enable power user mode
+:quit                    exit the interpreter
+:replay [options]        reset the repl and replay all previous commands
+:require <path>          add a jar to the classpath
+:reset [options]         reset the repl to its initial state, forgetting all session entries
+:save <path>             save replayable session to a file
+:sh <command line>       run a shell command (result is implicitly => List[String])
+:settings <options>      update compiler options, if possible; see reset
+:silent                  disable/enable automatic printing of results
+:type [-v] <expr>        display the type of an expression without evaluating it
+:kind [-v] <type>        display the kind of a type. see also :help kind
+:warnings                show the suppressed warnings from the most recent line which had any
+
+scala> :quit
+kartikchandna@Kartiks-MacBook-Pro ~ % 

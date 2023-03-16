@@ -1,0 +1,120 @@
+Last login: Tue Mar 14 23:16:12 on ttys001
+kartikchandna@Kartiks-MacBook-Pro ~ % spark-shell
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+23/03/15 02:54:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Spark context Web UI available at http://10.103.142.131:4040
+Spark context available as 'sc' (master = local[*], app id = local-1678829046667).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.3.2
+      /_/
+         
+Using Scala version 2.12.15 (OpenJDK 64-Bit Server VM, Java 19.0.2)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> val conf = new SparkConf().setAppName("practice").setMaster("local")
+<console>:22: error: not found: type SparkConf
+       val conf = new SparkConf().setAppName("practice").setMaster("local")
+                      ^
+
+scala> import org.apache.spark.SparkContext
+import org.apache.spark.SparkContext
+
+scala> import org.apache.spark.SparkConf
+import org.apache.spark.SparkConf
+
+scala> val conf = new SparkConf().setAppName("practice").setMaster("local")
+conf: org.apache.spark.SparkConf = org.apache.spark.SparkConf@386643e
+
+scala> val sc = new sparkContext(conf)
+<console>:25: error: not found: type sparkContext
+       val sc = new sparkContext(conf)
+                    ^
+
+scala> val sc = new SparkContext(conf)
+org.apache.spark.SparkException: Only one SparkContext should be running in this JVM (see SPARK-2243).The currently running SparkContext was created at:
+org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:947)
+org.apache.spark.repl.Main$.createSparkSession(Main.scala:106)
+<init>(<console>:15)
+<init>(<console>:42)
+<init>(<console>:44)
+.<init>(<console>:48)
+.<clinit>(<console>)
+.lzycompute(<console>:7)
+.$print(<console>:6)
+$print(<console>)
+java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+java.base/java.lang.reflect.Method.invoke(Method.java:578)
+scala.tools.nsc.interpreter.IMain$ReadEvalPrint.call(IMain.scala:747)
+scala.tools.nsc.interpreter.IMain$Request.loadAndRun(IMain.scala:1020)
+scala.tools.nsc.interpreter.IMain.$anonfun$interpret$1(IMain.scala:568)
+scala.reflect.internal.util.ScalaClassLoader.asContext(ScalaClassLoader.scala:36)
+scala.reflect.internal.util.ScalaClassLoader.asContext$(ScalaClassLoader.scala:116)
+scala.reflect.internal.util.AbstractFileClassLoader.asContext(AbstractFileClassLoader.scala:41)
+scala.tools.nsc.interpreter.IMain.loadAndRunReq$1(IMain.scala:567)
+scala.tools.nsc.interpreter.IMain.interpret(IMain.scala:594)
+  at org.apache.spark.SparkContext$.$anonfun$assertNoOtherContextIsRunning$2(SparkContext.scala:2671)
+  at scala.Option.foreach(Option.scala:407)
+  at org.apache.spark.SparkContext$.assertNoOtherContextIsRunning(SparkContext.scala:2668)
+  at org.apache.spark.SparkContext$.markPartiallyConstructed(SparkContext.scala:2758)
+  at org.apache.spark.SparkContext.<init>(SparkContext.scala:97)
+  ... 43 elided
+
+scala> spark.SparkContext.stop()
+<console>:25: error: value SparkContext is not a member of org.apache.spark.sql.SparkSession
+       spark.SparkContext.stop()
+             ^
+
+scala> spark.SparkContext.stop
+<console>:25: error: value SparkContext is not a member of org.apache.spark.sql.SparkSession
+       spark.SparkContext.stop
+             ^
+
+scala> spark.sparkContext.stop()
+
+scala> spark.sparkContext.stop()
+
+scala> spark.sparkContext.stop()
+
+scala> val sc = new SparkContext(conf)
+sc: org.apache.spark.SparkContext = org.apache.spark.SparkContext@1ca5b7c7
+
+scala> val data = Array(1,2,3,4,5)
+data: Array[Int] = Array(1, 2, 3, 4, 5)
+
+scala> val distData = sc.parallelize(data)
+distData: org.apache.spark.rdd.RDD[Int] = ParallelCollectionRDD[0] at parallelize at <console>:26
+
+scala> sc.parallelize(data,10)
+res5: org.apache.spark.rdd.RDD[Int] = ParallelCollectionRDD[1] at parallelize at <console>:27
+
+scala> val totalLen = distData.reduce((a,b) => a+b)
+totalLen: Int = 15
+
+scala> totalLen.persist()
+<console>:26: error: value persist is not a member of Int
+       totalLen.persist()
+                ^
+
+scala> distData.persist()
+res7: distData.type = ParallelCollectionRDD[0] at parallelize at <console>:26
+
+scala> # xyz
+<console>:1: error: illegal start of definition
+       # xyz
+       ^
+
+scala> sc.stop()
+
+scala> quit
+<console>:25: error: not found: value quit
+       quit
+       ^
+
+scala> :quit
+kartikchandna@Kartiks-MacBook-Pro ~ % 
